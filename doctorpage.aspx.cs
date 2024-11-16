@@ -9,16 +9,13 @@ namespace Telehealth_Hackathon2024
 {
     public partial class doctorpage : System.Web.UI.Page
     {
-        // Simulated storage for a patient
-        private static Patient _currentPatient = new Patient { Name = "John Doe" };
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                LoadMessages();
-            }
+          
+ 
         }
+<<<<<<< Updated upstream
 
         // Load messages into the chat window
         private void LoadMessages()
@@ -58,4 +55,7 @@ namespace Telehealth_Hackathon2024
             lblContact.Text = UsersList.currentUser.Username + "@gmail.com";
         }
     }
+=======
+       }
+>>>>>>> Stashed changes
 }

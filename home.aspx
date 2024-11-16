@@ -5,7 +5,7 @@
 <head runat="server">
     <title>Valdosta Medicine Clinic</title>
     <style>
-        /* General Styling */
+       
         body {
             background-image: url('images/background.jpg');
             background-attachment: fixed;
@@ -83,25 +83,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Top Section -->
+   
         <div class="top"> 
             <asp:Button ID="signInBtn" runat="server" Text="Sign In" CssClass="sign-in-button" Style="float: right;" OnClick="signInBtn_Click" />
             <h1>Valdosta Medicine Clinic</h1>
         </div>
 
-        <!-- Main Content Section -->
         <div class="main-content">
             <h2>Your Health, Our Priority</h2>
             <p class="content">Welcome to Valdosta Medicine Clinic! Sign in to connect with a doctor today.</p>
         </div>
 
-        <!-- Extra Information Section -->
         <div class="extra-info">
             <p class="info_title">Available Services:</p>
             <p class="content_info">Message doctors, Video call Support, Note records, etc.</p>
         </div>
 
-        <!-- Footer -->
+ 
         <div class="footer">
             <p>Located in Valdosta, Georgia.</p>
             <p>Questions? Call 229-201-9234</p>

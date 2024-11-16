@@ -57,13 +57,17 @@
             margin-top: 0;
             color: #3498db;
         }
+        .notes-section input,
         .notes-section textarea {
             width: 100%;
-            height: 100px;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 10px;
             font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .notes-section textarea {
+            height: 100px;
             resize: none;
         }
         .notes-section button {
@@ -90,32 +94,6 @@
             margin-bottom: 10px;
             padding: 10px;
         }
-        .message-section textarea {
-            width: 100%;
-            height: 80px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            font-size: 14px;
-            resize: none;
-        }
-        .message-section button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .message-section button:hover {
-            background-color: #2980b9;
-        }
-        @media (max-width: 768px) {
-            main {
-                flex-direction: column;
-            }
-        }
     </style>
 </head>
 <body>
@@ -128,6 +106,7 @@
         <!-- Profile Section -->
         <asp:Panel ID="ProfilePanel" runat="server" CssClass="dashboard-panel">
             <h2>Doctor Profile</h2>
+<<<<<<< Updated upstream
             <p>
                 <strong>Username:</strong> 
                 <asp:Label ID="lblUsername" runat="server" Text="Dr. Leslie Dawn"></asp:Label>
@@ -144,8 +123,15 @@
 
 
         <!-- Notes Section -->
+=======
+            <p><strong>Name:</strong> Dr. <asp:Label ID="lblDoctorName" runat="server" Text=""></asp:Label></p>
+            <p><strong>Specialty:</strong> General Practitioner</p>
+            <p><strong>Contact:</strong> @example.com</p>
+        </div>
+>>>>>>> Stashed changes
         <div class="dashboard-panel notes-section">
             <h2>Notes</h2>
+            <input type="text" id="patientNameInput" placeholder="Enter patient name..." />
             <textarea id="noteInput" placeholder="Write a note..."></textarea>
             <button onclick="addNote()">Add Note</button>
             <ul class="notes-list" id="notesList"></ul>
@@ -155,36 +141,27 @@
             <ul>
                 <li>Dave Gibson - Nov 17, 2024, 10:00 AM</li>
                 <li>Brenda Livingston - Nov 17, 2024, 11:30 AM</li>
-                <li>Sharon Cummings - Nov 18, 2024, 9:00 AM</li>
+                <li>Amber Burnette - Nov 18, 2024, 9:00 AM</li>
             </ul>
-        </div>
-        <div class="dashboard-panel message-section">
-            <h2>Message Patients</h2>
-            <asp:Label ID="messagesLbl" runat="server" Text="You have no new messages." CssClass="messages-label"></asp:Label>
         </div>
     </main>
     <script>
         function addNote() {
+            const patientNameInput = document.getElementById('patientNameInput');
             const noteInput = document.getElementById('noteInput');
             const notesList = document.getElementById('notesList');
-            if (noteInput.value.trim() !== "") {
-                const newNote = document.createElement('li');
-                newNote.textContent = noteInput.value.trim();
-                notesList.appendChild(newNote);
-                noteInput.value = "";
-            } else {
-                alert("Note cannot be empty!");
-            }
-        }
 
-        function sendMessage() {
-            const messageInput = document.getElementById('messageInput');
-            if (messageInput.value.trim() !== "") {
-                alert("Message sent to the patient: " + messageInput.value.trim());
-                messageInput.value = "";
-            } else {
-                alert("Message cannot be empty!");
+            if (patientNameInput.value.trim() === "" || noteInput.value.trim() === "") {
+                alert("Both patient name and note are required!");
+                return;
             }
+
+            const newNote = document.createElement('li');
+            newNote.textContent = `${patientNameInput.value.trim()} - ${noteInput.value.trim()}`;
+            notesList.appendChild(newNote);
+
+            patientNameInput.value = "";
+            noteInput.value = "";
         }
 
         function logout() {

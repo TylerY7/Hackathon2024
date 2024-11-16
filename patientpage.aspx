@@ -17,6 +17,27 @@
             color: white;
             padding: 15px 20px;
             text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .logout-btn {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: white;
+            color: #3498db;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .logout-btn:hover {
+            background-color: #e0e0e0;
         }
         main {
             display: flex;
@@ -82,11 +103,12 @@
 <body>
     <header>
         <h1>Patient Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
     </header>
     <main>
         <div class="dashboard-panel">
-            <h2>Medical Note Records</h2>
-            <p>Access and manage your medical notes here.</p>
+            <h2>Medical Records</h2>
+            <p>Access and manage your medical records here.</p>
         </div>
         <div class="dashboard-panel">
             <h2>Start Video</h2>
@@ -128,6 +150,10 @@
             }
             cameraModal.style.display = 'none';
             video.srcObject = null;
+        }
+
+        function logout() {
+            window.location.href = "login.aspx";
         }
     </script>
 </body>

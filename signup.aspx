@@ -5,7 +5,7 @@
 <head runat="server">
     <title>Sign Up - Valdosta Medicine Clinic</title>
     <style>
-        /* General Styling */
+       
         body {
             background-image: url('images/background.jpg');
             background-attachment: fixed;
@@ -80,12 +80,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Top Section -->
+       
         <div class="top">
             <h1>Valdosta Medicine Clinic</h1>
         </div>
-
-        <!-- Sign Up Form -->
         <div class="signup-container">
             <h2>Create an Account</h2>
             <asp:Label ID="usernameLbl" runat="server" Text="Username:" AssociatedControlID="usernameTxt"></asp:Label>
