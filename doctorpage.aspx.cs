@@ -11,7 +11,8 @@ namespace Telehealth_Hackathon2024
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblUsername.Text = UsersList.currentUser.Username;
+            lblContact.Text = UsersList.currentUser.Username + "@gmail.com";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Telehealth_Hackathon2024
     public static class UsersList
     {
         public static List<User> Users = new List<User>();
-
+        public static User currentUser;
 
         public static bool AddUser(string username, string password, int accessType)
         {
@@ -20,6 +20,11 @@ namespace Telehealth_Hackathon2024
                 return true;
             }
             return false;
+        }
+
+        public static void SetCurrentUser (User user)
+        {
+            currentUser = user;
         }
 
         public static User GetUser(string username)

@@ -28,6 +28,7 @@ namespace Telehealth_Hackathon2024
 
             if (user != null && user.Password == enteredPassword)
             {
+                UsersList.SetCurrentUser(user);
                 switch (user.AccessType)
                 {
                     case 0: // Patient
@@ -40,7 +41,6 @@ namespace Telehealth_Hackathon2024
             }
             else
             {
-                // Display error if username or password doesn't match
                 lblError.Text = "Invalid username or password. Please try again.";
             }
         }

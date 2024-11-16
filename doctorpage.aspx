@@ -89,12 +89,23 @@
     </header>
     <main>
         <!-- Profile Section -->
-        <div class="dashboard-panel">
+        <!-- Profile Section -->
+        <asp:Panel ID="ProfilePanel" runat="server" CssClass="dashboard-panel">
             <h2>Doctor Profile</h2>
-            <p><strong>Name:</strong> Dr. Leslie Dawn</p>
-            <p><strong>Specialty:</strong> General Practitioner</p>
-            <p><strong>Contact:</strong> leslie@example.com</p>
-        </div>
+            <p>
+                <strong>Username:</strong> 
+                <asp:Label ID="lblUsername" runat="server" Text="Dr. Leslie Dawn"></asp:Label>
+            </p>
+            <p>
+                <strong>Specialty:</strong> 
+                <asp:Label ID="lblSpecialty" runat="server" Text="General Practitioner"></asp:Label>
+            </p>
+            <p>
+                <strong>Contact:</strong> 
+                <asp:Label ID="lblContact" runat="server" Text="leslie@example.com"></asp:Label>
+            </p>
+        </asp:Panel>
+
 
         <!-- Notes Section -->
         <div class="dashboard-panel notes-section">
