@@ -1,49 +1,91 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="Telehealth_Hackathon2024.signup" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-      <title>Sign Up - Valdosta Medicine Clinic</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Sign Up - Valdosta Medicine Clinic</title>
     <style>
+        /* General Styling */
         body {
+            background-image: url('images/background.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .top {
             background-color: #add8e6;
-        }
-        .signup-container {
-            width: 400px;
-            margin: 100px auto;
-            padding: 30px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .signup-container h2 {
+            padding: 20px;
             text-align: center;
         }
-        .signup-container .input-field {
+
+        .signup-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 3px solid #3498db;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px auto;
+            width: 400px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            color: #3498db;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .input-field {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
         }
-        .signup-container .button {
+
+        .button {
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #3498db;
             color: white;
+            font-size: 16px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
         }
-        .signup-container .button:hover {
-            background-color: #45a049;
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .message {
+            margin-top: 15px;
+            color: red;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
+        <!-- Top Section -->
+        <div class="top">
+            <h1>Valdosta Medicine Clinic</h1>
+        </div>
+
+        <!-- Sign Up Form -->
         <div class="signup-container">
             <h2>Create an Account</h2>
             <asp:Label ID="usernameLbl" runat="server" Text="Username:" AssociatedControlID="usernameTxt"></asp:Label>
@@ -55,9 +97,7 @@
             <asp:Label ID="confirmPasswordLbl" runat="server" Text="Confirm Password:" AssociatedControlID="confirmPasswordTxt"></asp:Label>
             <asp:TextBox ID="confirmPasswordTxt" runat="server" TextMode="Password" CssClass="input-field"></asp:TextBox>
             <asp:Button ID="signupBtn" runat="server" Text="Sign Up" OnClick="signupBtn_Click" CssClass="button" />
-
-            <asp:Label ID="messageLbl" runat="server" ForeColor="Red"></asp:Label>
-
+            <asp:Label ID="messageLbl" runat="server" CssClass="message"></asp:Label>
         </div>
     </form>
 </body>

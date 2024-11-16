@@ -31,6 +31,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+          <h2>Valdosta Medicine</h2>
          <div class="dashboard-container">
             <h2>Welcome to Your Patient Dashboard</h2>
             <div class="dashboard-section">
