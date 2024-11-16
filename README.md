@@ -12,16 +12,16 @@ messaging app for now. This is something that they only want if everything else 
 They are in desperate need of this system, so they’re willing to accept command line
 applications if necessary (Web apps, mobile apps, command line, or however else you may
 wish to implement this application will be accepted).
-Summary and Details:
+#Summary and Details:
 You are creating a telehealth application with patient and doctor accounts that can
 communicate with each other via messaging and time permitting video calls.
-Patient Accounts:
+#Patient Accounts:
 ● Anyone can create a patient account
 ○ Alternatively you can have an admin account that handles creating all
 patient/doctor accounts if you prefer
 ● Can start conversations with doctor accounts
 ● Cannot start conversations with other patients
-Doctor Accounts:
+#Doctor Accounts:
 ● Creating this type of account must be restricted somehow, for example:
 ○ An admin account that handles creating all doctor accounts
 ○ A set of credentials is required when creating
@@ -30,7 +30,7 @@ account
 ● Can start conversations with patients
 ● Can start conversations with other doctors
 ● Can record and access notes
-Desired features from most to least important:
+#Desired features from most to least important:
 ● Messaging between 2 people (with or without account types)
 ● Multiple messaging threads allowing a doctor to be in communication with multiple
 patients
@@ -40,7 +40,7 @@ patients
 notes by other doctors in another section
 ● Group messaging
 ● Video call support (We’re not expecting this one, but props if you get it!)
-Rules:
+#Rules:
 ● If you can find existing API/framework/toolkit/etc. to help facilitate creating this app then
 you are free to use it
 ● A.I. generated code is banned, if caught your team will be disqualified
