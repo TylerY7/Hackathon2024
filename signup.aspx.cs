@@ -7,15 +7,18 @@ using System.Web.UI.WebControls;
 
 namespace Telehealth_Hackathon2024
 {
-    public partial class home : System.Web.UI.Page
+    public partial class signup : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        protected void signInBtn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("login.aspx");
-        }
+
+    protected void signupBtn_Click(object sender, EventArgs e)
+    {
+        //add if statements here to determine if 
+        //patient, doctor, or admin logged in
+        Response.Redirect("patientaccount.aspx");
     }
+}
 }

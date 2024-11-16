@@ -12,12 +12,18 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+       .top {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
     </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="top"> 
-            <asp:Button ID="signInBtn" runat="server" Text="Sign In" PostBackUrl="signin.aspx" CssClass="sign-in-button" Style="float: right;" />
+            <asp:Button ID="signInBtn" runat="server" Text="Sign In" CssClass="sign-in-button" Style="float: right;" OnClick="signInBtn_Click" />
             <h1>Valdosta Medicine Clinic</h1>
         </div>
         <div class="main-content">
