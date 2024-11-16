@@ -55,6 +55,9 @@
             <asp:Label ID="confirmPasswordLbl" runat="server" Text="Confirm Password:" AssociatedControlID="confirmPasswordTxt"></asp:Label>
             <asp:TextBox ID="confirmPasswordTxt" runat="server" TextMode="Password" CssClass="input-field"></asp:TextBox>
             <asp:Button ID="signupBtn" runat="server" Text="Sign Up" OnClick="signupBtn_Click" CssClass="button" />
+
+            <asp:Label ID="messageLbl" runat="server" ForeColor="Red"></asp:Label>
+
         </div>
     </form>
 </body>
