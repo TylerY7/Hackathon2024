@@ -27,7 +27,7 @@ namespace Telehealth_Hackathon2024
                 return;
             }
 
-            string passwordHash = HashPassword(password);
+            //string passwordHash = HashPassword(password);
 
 
             // Check if email already exists in the database
@@ -37,7 +37,7 @@ namespace Telehealth_Hackathon2024
             }
             else
             {
-                if (UsersList.AddUser(username, passwordHash, 0)) // Role 0 for Patient
+                if (UsersList.AddUser(username, password, 0)) // Role 0 for Patient
                 {
 
                     Response.Redirect("login.aspx");
@@ -53,13 +53,13 @@ namespace Telehealth_Hackathon2024
 
         }
 
-        private string HashPassword(string password)
-        {
-            using (var sha256 = System.Security.Cryptography.SHA256.Create())
-            {
-                byte[] hashedBytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(hashedBytes);
-            }
-        }
+        //private string hashpassword(string password)
+        //{
+        //    using (var sha256 = system.security.cryptography.sha256.create())
+        //    {
+        //        byte[] hashedbytes = sha256.computehash(system.text.encoding.utf8.getbytes(password));
+        //        return convert.tobase64string(hashedbytes);
+        //    }
+        //}
     }
 }

@@ -9,6 +9,7 @@ namespace Telehealth_Hackathon2024
     {
         public static List<User> Users = new List<User>();
 
+
         public static bool AddUser(string username, string password, int accessType)
         {
             // Check if the user already exists

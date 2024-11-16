@@ -76,6 +76,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Note.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UsersList.cs" />
     <Compile Include="doctorpage.aspx.cs">
@@ -101,7 +102,6 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Patient.cs" />
-    <Compile Include="Doctor.cs" />
     <Compile Include="patientpage.aspx.cs">
       <DependentUpon>patientpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
