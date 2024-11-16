@@ -102,11 +102,9 @@
         <button class="logout-btn" onclick="logout()">Logout</button>
     </header>
     <main>
-        <!-- Profile Section -->
-        <!-- Profile Section -->
+        
         <asp:Panel ID="ProfilePanel" runat="server" CssClass="dashboard-panel">
             <h2>Doctor Profile</h2>
-<<<<<<< Updated upstream
             <p>
                 <strong>Username:</strong> 
                 <asp:Label ID="lblUsername" runat="server" Text="Dr. Leslie Dawn"></asp:Label>
@@ -123,12 +121,6 @@
 
 
         <!-- Notes Section -->
-=======
-            <p><strong>Name:</strong> Dr. <asp:Label ID="lblDoctorName" runat="server" Text=""></asp:Label></p>
-            <p><strong>Specialty:</strong> General Practitioner</p>
-            <p><strong>Contact:</strong> @example.com</p>
-        </div>
->>>>>>> Stashed changes
         <div class="dashboard-panel notes-section">
             <h2>Notes</h2>
             <input type="text" id="patientNameInput" placeholder="Enter patient name..." />
