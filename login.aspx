@@ -104,6 +104,8 @@
             <asp:Button ID="loginBtn" runat="server" Text="Sign in" OnClick="loginBtn_Click" CssClass="button" />
             <div class="create-account">
                 <a href="signup.aspx">Create an Account</a>
+                <br />
+                <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
             </div>
         </div>
     </form>

@@ -16,7 +16,7 @@ namespace Telehealth_Hackathon2024
 
         protected void signupBtn_Click(object sender, EventArgs e)
         {
-            string email = emailTxt.Text.Trim();
+            string username = usernameTxt.Text.Trim();
             string password = passwordTxt.Text;
             string confirmPassword = confirmPasswordTxt.Text;
 
@@ -31,13 +31,13 @@ namespace Telehealth_Hackathon2024
 
 
             // Check if email already exists in the database
-            if (UsersList.UserExists(email))
+            if (UsersList.UserExists(username))
             {
                 messageLbl.Text = "User with this email already exists!";
             }
             else
             {
-                if (UsersList.AddUser(email, passwordHash, 0)) // Role 0 for Patient
+                if (UsersList.AddUser(username, passwordHash, 0)) // Role 0 for Patient
                 {
 
                     Response.Redirect("login.aspx");

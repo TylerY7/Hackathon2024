@@ -23,7 +23,7 @@ namespace Telehealth_Hackathon2024
             // Check if the user exists in the list
             var user = UsersList.GetUser(enteredUsername);
 
-            if (user != null && user.Password == enteredPassword)
+            if (user != null && user.Password == UsersList.HashPassword(enteredPassword))
             {
                 // User found, redirect based on their AccessType
                 switch (user.AccessType)
@@ -46,7 +46,7 @@ namespace Telehealth_Hackathon2024
             else
             {
                 // Display error if username or password doesn't match
-                //lblError.Text = "Invalid username or password. Please try again.";
+                lblError.Text = "Invalid username or password. Please try again.";
             }
         }
 
