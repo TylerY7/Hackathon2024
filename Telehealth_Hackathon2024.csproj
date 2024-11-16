@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="home.aspx" />
+    <Content Include="images\background.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
