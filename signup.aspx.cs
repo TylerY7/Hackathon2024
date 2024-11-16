@@ -29,19 +29,18 @@ namespace Telehealth_Hackathon2024
 
             string passwordHash = HashPassword(password);
 
-            UserDataAccess userData = new UserDataAccess();
 
             // Check if email already exists in the database
-            if (userData.UserExists(email))
+            if (UsersList.UserExists(email))
             {
                 messageLbl.Text = "User with this email already exists!";
             }
             else
             {
-                if (userData.AddUser(email, passwordHash, 0)) // Role 0 for Patient
+                if (UsersList.AddUser(email, passwordHash, 0)) // Role 0 for Patient
                 {
 
-                    Response.Redirect("patientaccount.aspx");
+                    Response.Redirect("login.aspx");
                 }
                 else
                 {

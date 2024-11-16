@@ -35,7 +35,17 @@
             <h2>Welcome to Your Patient Dashboard</h2>
             <div class="dashboard-section">
                 <h3>Upcoming Appointments</h3>
-                <asp:GridView ID="appointmentsGridView" runat="server" CssClass="appointments-grid"></asp:GridView>
+                <asp:GridView ID="appointmentsGridView" runat="server" CssClass="appointments-grid" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="SqlDataSource1">
+                    <Columns>
+                        <asp:BoundField DataField="UserID" HeaderText="UserID" InsertVisible="False" ReadOnly="True" SortExpression="UserID" />
+                        <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+                        <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+                        <asp:BoundField DataField="LoginID" HeaderText="LoginID" SortExpression="LoginID" />
+                        <asp:BoundField DataField="PWord" HeaderText="PWord" SortExpression="PWord" />
+                        <asp:BoundField DataField="AccessLevel" HeaderText="AccessLevel" SortExpression="AccessLevel" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:patients[1]ConnectionString %>" ProviderName="<%$ ConnectionStrings:patients[1]ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Users]"></asp:SqlDataSource>
             </div>
             <div class="dashboard-section">
                 <h3>Medical Records</h3>
