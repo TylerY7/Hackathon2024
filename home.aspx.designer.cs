@@ -10,7 +10,7 @@
 
 namespace Telehealth_Hackathon2024
 {
-    public partial class WebForm1
+    public partial class home
     {
 
         /// <summary>
